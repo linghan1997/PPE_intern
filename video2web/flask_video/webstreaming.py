@@ -97,6 +97,7 @@ def generate():
 @app.route("/video_feed")
 def video_feed():
     # return the response generated along with the specific media type (mime type)
+    # a simple http method with relatively low efficiency
     return Response(generate(), mimetype = "multipart/x-mixed-replace; boundary=frame")
 
 
